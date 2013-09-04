@@ -18,6 +18,16 @@
 		CE8CF50617D47A0B0062E5E6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8CF50517D47A0B0062E5E6 /* Default-568h@2x.png */; };
 		CE8CF50917D47A0B0062E5E6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8CF50717D47A0B0062E5E6 /* MainStoryboard.storyboard */; };
 		CE8CF50C17D47A0B0062E5E6 /* YAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8CF50B17D47A0B0062E5E6 /* YAViewController.m */; };
+		CE8CF51617D486130062E5E6 /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE8CF51517D486130062E5E6 /* photo1.jpg */; };
+		CE8CF51917D486710062E5E6 /* YACollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8CF51817D486710062E5E6 /* YACollectionViewController.m */; };
+		CE8CF51B17D48C630062E5E6 /* Fashion-Marketing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE8CF51A17D48C630062E5E6 /* Fashion-Marketing.jpg */; };
+		CE8CF51E17D48DE50062E5E6 /* 28-star.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8CF51C17D48DE50062E5E6 /* 28-star.png */; };
+		CE8CF51F17D48DE50062E5E6 /* 28-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8CF51D17D48DE50062E5E6 /* 28-star@2x.png */; };
+		CE8CF52217D48EDF0062E5E6 /* YAPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8CF52117D48EDF0062E5E6 /* YAPhotoViewController.m */; };
+		CE8CF52517D492390062E5E6 /* 53-house.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8CF52317D492390062E5E6 /* 53-house.png */; };
+		CE8CF52617D492390062E5E6 /* 53-house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8CF52417D492390062E5E6 /* 53-house@2x.png */; };
+		CE8CF52B17D60C3F0062E5E6 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8CF52A17D60C3F0062E5E6 /* AsyncImageView.m */; };
+		CE8CF52E17D6208A0062E5E6 /* TextDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8CF52D17D6208A0062E5E6 /* TextDownloader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +47,20 @@
 		CE8CF50817D47A0B0062E5E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		CE8CF50A17D47A0B0062E5E6 /* YAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YAViewController.h; sourceTree = "<group>"; };
 		CE8CF50B17D47A0B0062E5E6 /* YAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YAViewController.m; sourceTree = "<group>"; };
+		CE8CF51517D486130062E5E6 /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo1.jpg; sourceTree = "<group>"; };
+		CE8CF51717D486710062E5E6 /* YACollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACollectionViewController.h; sourceTree = "<group>"; };
+		CE8CF51817D486710062E5E6 /* YACollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACollectionViewController.m; sourceTree = "<group>"; };
+		CE8CF51A17D48C630062E5E6 /* Fashion-Marketing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Fashion-Marketing.jpg"; sourceTree = "<group>"; };
+		CE8CF51C17D48DE50062E5E6 /* 28-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "28-star.png"; sourceTree = "<group>"; };
+		CE8CF51D17D48DE50062E5E6 /* 28-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "28-star@2x.png"; sourceTree = "<group>"; };
+		CE8CF52017D48EDF0062E5E6 /* YAPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAPhotoViewController.h; sourceTree = "<group>"; };
+		CE8CF52117D48EDF0062E5E6 /* YAPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAPhotoViewController.m; sourceTree = "<group>"; };
+		CE8CF52317D492390062E5E6 /* 53-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house.png"; sourceTree = "<group>"; };
+		CE8CF52417D492390062E5E6 /* 53-house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "53-house@2x.png"; sourceTree = "<group>"; };
+		CE8CF52917D60C3F0062E5E6 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
+		CE8CF52A17D60C3F0062E5E6 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		CE8CF52C17D6208A0062E5E6 /* TextDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextDownloader.h; path = AsyncImageView/TextDownloader.h; sourceTree = "<group>"; };
+		CE8CF52D17D6208A0062E5E6 /* TextDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextDownloader.m; path = AsyncImageView/TextDownloader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,9 @@
 		CE8CF4E317D47A0B0062E5E6 = {
 			isa = PBXGroup;
 			children = (
+				CE8CF52C17D6208A0062E5E6 /* TextDownloader.h */,
+				CE8CF52D17D6208A0062E5E6 /* TextDownloader.m */,
+				CE8CF52817D60C3F0062E5E6 /* AsyncImageView */,
 				CE8CF4F517D47A0B0062E5E6 /* LookBook */,
 				CE8CF4EE17D47A0B0062E5E6 /* Frameworks */,
 				CE8CF4ED17D47A0B0062E5E6 /* Products */,
@@ -83,6 +110,10 @@
 		CE8CF4F517D47A0B0062E5E6 /* LookBook */ = {
 			isa = PBXGroup;
 			children = (
+				CE8CF52017D48EDF0062E5E6 /* YAPhotoViewController.h */,
+				CE8CF52117D48EDF0062E5E6 /* YAPhotoViewController.m */,
+				CE8CF51717D486710062E5E6 /* YACollectionViewController.h */,
+				CE8CF51817D486710062E5E6 /* YACollectionViewController.m */,
 				CE8CF4FE17D47A0B0062E5E6 /* YAAppDelegate.h */,
 				CE8CF4FF17D47A0B0062E5E6 /* YAAppDelegate.m */,
 				CE8CF50717D47A0B0062E5E6 /* MainStoryboard.storyboard */,
@@ -96,6 +127,12 @@
 		CE8CF4F617D47A0B0062E5E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE8CF52317D492390062E5E6 /* 53-house.png */,
+				CE8CF52417D492390062E5E6 /* 53-house@2x.png */,
+				CE8CF51C17D48DE50062E5E6 /* 28-star.png */,
+				CE8CF51D17D48DE50062E5E6 /* 28-star@2x.png */,
+				CE8CF51A17D48C630062E5E6 /* Fashion-Marketing.jpg */,
+				CE8CF51517D486130062E5E6 /* photo1.jpg */,
 				CE8CF4F717D47A0B0062E5E6 /* LookBook-Info.plist */,
 				CE8CF4F817D47A0B0062E5E6 /* InfoPlist.strings */,
 				CE8CF4FB17D47A0B0062E5E6 /* main.m */,
@@ -105,6 +142,15 @@
 				CE8CF50517D47A0B0062E5E6 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE8CF52817D60C3F0062E5E6 /* AsyncImageView */ = {
+			isa = PBXGroup;
+			children = (
+				CE8CF52917D60C3F0062E5E6 /* AsyncImageView.h */,
+				CE8CF52A17D60C3F0062E5E6 /* AsyncImageView.m */,
+			);
+			path = AsyncImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +210,12 @@
 				CE8CF50417D47A0B0062E5E6 /* Default@2x.png in Resources */,
 				CE8CF50617D47A0B0062E5E6 /* Default-568h@2x.png in Resources */,
 				CE8CF50917D47A0B0062E5E6 /* MainStoryboard.storyboard in Resources */,
+				CE8CF51617D486130062E5E6 /* photo1.jpg in Resources */,
+				CE8CF51B17D48C630062E5E6 /* Fashion-Marketing.jpg in Resources */,
+				CE8CF51E17D48DE50062E5E6 /* 28-star.png in Resources */,
+				CE8CF51F17D48DE50062E5E6 /* 28-star@2x.png in Resources */,
+				CE8CF52517D492390062E5E6 /* 53-house.png in Resources */,
+				CE8CF52617D492390062E5E6 /* 53-house@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +229,10 @@
 				CE8CF4FC17D47A0B0062E5E6 /* main.m in Sources */,
 				CE8CF50017D47A0B0062E5E6 /* YAAppDelegate.m in Sources */,
 				CE8CF50C17D47A0B0062E5E6 /* YAViewController.m in Sources */,
+				CE8CF51917D486710062E5E6 /* YACollectionViewController.m in Sources */,
+				CE8CF52217D48EDF0062E5E6 /* YAPhotoViewController.m in Sources */,
+				CE8CF52B17D60C3F0062E5E6 /* AsyncImageView.m in Sources */,
+				CE8CF52E17D6208A0062E5E6 /* TextDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

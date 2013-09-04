@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YAViewController : UIViewController
+@interface YAViewController : UIViewController <UICollectionViewDataSource>
+
+@property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 
 @end
