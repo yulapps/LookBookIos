@@ -19,6 +19,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    categories = [NSArray arrayWithObjects:@"Girls", @"My Wishlists", @"Guys", @"New", @"Hot", nil];
+    urls = [NSArray arrayWithObjects:@"/photos/?category=1", @"/wishlists/",  @"/photos/?category=2", @"/new/", @"/hot/", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,7 +31,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 6;
+    return categories.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -39,28 +41,7 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
     UILabel *label = (UILabel *)[cell viewWithTag:3];
-    switch (indexPath.row) {
-        case 0:
-            label.text = @"Girls";
-            break;
-        case 1:
-            label.text = @"My Wishlists";
-            break;
-        case 2:
-            label.text = @"Guys";
-            break;
-        case 3:
-            label.text = @"New";
-            break;
-        case 4:
-            label.text = @"Contacts";
-            break;
-        case 5:
-            label.text = @"Hot";
-            break;
-        default:
-            break;
-    }
+    label.text = [categories objectAtIndex:indexPath.row];
 
     return cell;
 }
@@ -70,9 +51,8 @@
         NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];
         NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
         YACollectionViewController *destViewController = segue.destinationViewController;
-        UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
-        UILabel *label = (UILabel *)[cell viewWithTag:3];
-        destViewController.categoryName = label.text;
+        destViewController.categoryName = [categories objectAtIndex:indexPath.row];
+        destViewController.categoryUrl = [urls objectAtIndex:indexPath.row];
     }
 }
 

@@ -10,7 +10,6 @@
 
 @interface TextDownloader ()
 @property (nonatomic, strong) NSMutableData *activeDownload;
-@property (nonatomic, strong) NSURLConnection *connection;
 @end
 
 
@@ -20,29 +19,42 @@
 
 #pragma mark
 
+- (id)initWithUrl:(NSString *)url
+{
+    self = [super init];
+    self.urlString = url;
+    return self;
+}
+
 - (void)startDownload
 {
     self.activeDownload = [NSMutableData data];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString* token = [defaults objectForKey:@"token"];
+    NSString* token = [self getToken];
     if(!token){
-        [self getToken];
+        [self fetchToken];
         return;
     }
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
+    NSLog(@"loading %@", self.urlString);
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", HOST, self.urlString]]];
-    [request addValue:[NSString stringWithFormat:@"Token %@", token] forHTTPHeaderField:@"Authorization"];
+    [request setValue:[NSString stringWithFormat:@"Token %@", token] forHTTPHeaderField:@"Authorization"];
     
     // alloc+init and start an NSURLConnection; release on completion/failure
     self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
-- (void)getToken
+- (NSString*)getToken
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults objectForKey:@"token"];
+}
+
+- (void)fetchToken
 {
     fetchingToken = true;
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    NSString* urlString = [NSString stringWithFormat:@"%@/get-token/?user=%@", HOST, [[UIDevice currentDevice] identifierForVendor]];
+    NSString* urlString = [NSString stringWithFormat:@"%@/get-token/?user=%@", HOST, [[[UIDevice currentDevice] identifierForVendor] UUIDString]];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
@@ -101,6 +113,7 @@
         }
     }else{
         self.responseText = [[NSString alloc] initWithData:self.activeDownload encoding:NSUTF8StringEncoding];
+        NSLog(@"response %@", self.responseText);
     }
     self.activeDownload = nil;
     

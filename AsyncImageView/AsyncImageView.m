@@ -675,7 +675,6 @@ NSString *const AsyncImageErrorKey = @"error";
             [self addSubview:_activityView];
         }
         [_activityView startAnimating];
-        NSLog(@"%@", _activityView);
         self.loading = true;
     }
 }

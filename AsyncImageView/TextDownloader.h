@@ -15,8 +15,12 @@
 
 @property (nonatomic, strong) NSString *urlString;
 @property (nonatomic, strong) NSString *responseText;
+@property (nonatomic, strong) NSURLConnection *connection;
 @property (nonatomic, copy) void (^completionHandler)(void);
 
+- (id)initWithUrl:(NSString*)url;
+
+- (NSString*)getToken;
 - (void)startDownload;
 - (void)cancelDownload;
 - (BOOL)isDownloading;

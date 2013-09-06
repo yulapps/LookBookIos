@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface YAViewController : UIViewController <UICollectionViewDataSource>
+{
+    NSArray *categories;
+    NSArray *urls;
+}
 
 @property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 

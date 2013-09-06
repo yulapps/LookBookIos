@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TextDownloader.h"
 
 @interface YACollectionViewController : UICollectionViewController
-
+{
+    TextDownloader *textDownloader;
+    NSMutableArray *photos;
+}
 @property (nonatomic, strong) NSString *categoryName;
+@property (nonatomic, strong) NSString *categoryUrl;
 
 @end

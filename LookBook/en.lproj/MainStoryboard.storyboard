@@ -103,7 +103,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qFn-3y-wZU">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFn-3y-wZU">
                                 <color key="backgroundColor" red="0.97647064920000004" green="0.90588241820000004" blue="0.73725491759999995" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="hU2-Ro-V0W" id="dd8-AC-YQO"/>
@@ -112,7 +112,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="xhY-VP-orR">
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3f8-DV-r4q"/>
-                                    <barButtonItem image="28-star.png" style="plain" id="P66-j3-8Ey"/>
+                                    <barButtonItem image="28-star.png" style="plain" id="P66-j3-8Ey">
+                                        <connections>
+                                            <action selector="like:" destination="hU2-Ro-V0W" id="dgU-9g-t0L"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="BeL-ix-YJZ"/>
                                     <barButtonItem style="plain" systemItem="action" id="XJB-xI-KSr"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="lmM-Od-Y8m"/>
@@ -123,9 +127,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xhY-VP-orR" firstAttribute="bottom" secondItem="3gj-9h-jr7" secondAttribute="bottom" type="default" id="5cM-Pe-sdy"/>
-                            <constraint firstItem="qFn-3y-wZU" firstAttribute="trailing" secondItem="3gj-9h-jr7" secondAttribute="trailing" type="default" id="Ibt-UF-0co"/>
                             <constraint firstItem="qFn-3y-wZU" firstAttribute="top" secondItem="3gj-9h-jr7" secondAttribute="top" type="default" id="Lc4-tP-mTR"/>
                             <constraint firstItem="qFn-3y-wZU" firstAttribute="leading" secondItem="3gj-9h-jr7" secondAttribute="leading" type="default" id="MEW-aW-evP"/>
+                            <constraint firstAttribute="trailing" secondItem="qFn-3y-wZU" secondAttribute="trailing" constant="-10" id="R0o-Ki-924"/>
                             <constraint firstItem="xhY-VP-orR" firstAttribute="leading" secondItem="3gj-9h-jr7" secondAttribute="leading" type="default" id="X6f-dz-PwU"/>
                             <constraint firstItem="xhY-VP-orR" firstAttribute="top" secondItem="qFn-3y-wZU" secondAttribute="bottom" type="default" id="up2-bc-ckU"/>
                             <constraint firstItem="xhY-VP-orR" firstAttribute="trailing" secondItem="3gj-9h-jr7" secondAttribute="trailing" type="default" id="vRs-KK-XCM"/>
@@ -139,6 +143,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="likeBtn" destination="P66-j3-8Ey" id="ink-dz-1ub"/>
                         <outlet property="scrollView" destination="qFn-3y-wZU" id="o7z-o0-uDh"/>
                         <outlet property="toolbar" destination="xhY-VP-orR" id="HmZ-IL-OW3"/>
                     </connections>
@@ -155,22 +160,21 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.97647064924240112" green="0.90588241815567017" blue="0.73725491762161255" alpha="1" colorSpace="deviceRGB"/>
-                        <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gEk-Se-lBg">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="gEk-Se-lBg">
                             <size key="itemSize" width="100" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="vLR-a2-gbF">
-                                <rect key="frame" x="0.0" y="10" width="100" height="150"/>
+                                <rect key="frame" x="5" y="5" width="100" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afN-Ff-XHL"/>
+                                        <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afN-Ff-XHL" customClass="AsyncImageView"/>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -202,43 +206,6 @@
         <image name="28-star.png" width="26" height="26"/>
         <image name="Fashion-Marketing.jpg" width="1000" height="1000"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-        <class className="YACollectionViewController" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YACollectionViewController.h"/>
-        </class>
-        <class className="YAPhotoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YAPhotoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="home:"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
-            </relationships>
-        </class>
-        <class className="YAViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YAViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
